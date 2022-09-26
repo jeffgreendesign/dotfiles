@@ -1,36 +1,42 @@
 {
-    "git.ignoreMissingGitWarning": true,
-    "editor.wordWrap": "on",
-    "workbench.colorTheme": "Cobalt2",
-    "window.zoomLevel": 0,
-    "terminal.integrated.macOptionClickForcesSelection": true,
-    "workbench.startupEditor": "none",
-    "editor.tabCompletion": "on",
-    "editor.colorDecorators": false,
-    "liveServer.settings.donotShowInfoMsg": true,
-    // turn it off for JS and JSX, we will do this via eslint
     "[javascript]": {
         "editor.formatOnSave": false
     },
     "[javascriptreact]": {
         "editor.formatOnSave": false
     },
-    // tell the ESLint plugin to run on save
     "editor.codeActionsOnSave": {
         "source.fixAll": true
     },
-    "emmet.triggerExpansionOnTab": true,
-    "editor.renderWhitespace": "none",
-    "editor.defaultFormatter": "HookyQR.beautify",
-    "html.format.wrapLineLength": 0,
-    "editor.fontSize": 14,
-    "MinifyAll.disableJavascript": false,
+    "editor.colorDecorators": false,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.fontFamily": "'JetBrains Mono', Menlo, Monaco, 'Courier New', monospace",
-    "MinifyAll.disableJavascriptReact": false,
-    "editor.suggestSelection": "first",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "emmet.showSuggestionsAsSnippets": true,
-    "liveServer.settings.CustomBrowser": "chrome",
-    "bracket-pair-colorizer-2.showBracketsInGutter": true,
+    "editor.fontSize": 14,
+    "editor.hover.delay": 2000,
     "editor.parameterHints.enabled": false,
+    "editor.renderWhitespace": "none",
+    "editor.semanticTokenColorCustomizations": {},
+    "editor.suggestSelection": "first",
+    "editor.tabCompletion": "on",
+    "editor.wordWrap": "on",
+    "emmet.showSuggestionsAsSnippets": true,
+    "emmet.triggerExpansionOnTab": true,
+    "eslint.alwaysShowStatus": true,
+    "eslint.debug": true,
+    "git.ignoredRepositories": [
+        "Static"
+    ],
+    "git.ignoreMissingGitWarning": true,
+    "html.format.wrapLineLength": 0,
+    "liveServer.settings.CustomBrowser": "chrome",
+    "liveServer.settings.donotShowInfoMsg": true,
+    "MinifyAll.disableJavascript": false,
+    "MinifyAll.disableJavascriptReact": false,
+    "python.defaultInterpreterPath": "/usr/bin/python",
+    "security.workspace.trust.untrustedFiles": "open",
+    "terminal.integrated.macOptionClickForcesSelection": true,
+    "update.mode": "manual",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "workbench.colorTheme": "Cobalt2",
+    "workbench.startupEditor": "none"
 }
