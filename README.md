@@ -6,7 +6,7 @@ Settings I use
 
 * Adobe Creative Cloud
 * Hyper
-** Homebrew
+  * Homebrew
 * Git
 * Visual Studio Code
 * Xcode
