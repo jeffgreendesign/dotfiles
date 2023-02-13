@@ -4,6 +4,9 @@ Settings I use
 
 ## Programs
 
+* Adobe Creative Cloud
 * Hyper
+** Homebrew
 * Git
-* VS Code
+* Visual Studio Code
+* Xcode
