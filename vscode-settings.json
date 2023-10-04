@@ -1,9 +1,18 @@
 {
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
     "[javascript]": {
         "editor.formatOnSave": false
     },
     "[javascriptreact]": {
         "editor.formatOnSave": false
+    },
+    "[liquid]": {
+        "editor.defaultFormatter": "Shopify.theme-check-vscode"
+    },
+    "[php]": {
+        "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
     },
     "editor.codeActionsOnSave": {
         "source.fixAll": true
@@ -12,28 +21,38 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.fontFamily": "'JetBrains Mono', Menlo, Monaco, 'Courier New', monospace",
     "editor.fontSize": 14,
-    "editor.hover.delay": 2000,
+    "editor.hover.delay": 1000,
+    "editor.linkedEditing": true,
     "editor.parameterHints.enabled": false,
     "editor.renderWhitespace": "none",
     "editor.semanticTokenColorCustomizations": {},
     "editor.suggestSelection": "first",
     "editor.tabCompletion": "on",
+    "editor.tabSize": 2,
+    "editor.unicodeHighlight.nonBasicASCII": false,
     "editor.wordWrap": "on",
     "emmet.showSuggestionsAsSnippets": true,
     "emmet.triggerExpansionOnTab": true,
     "eslint.alwaysShowStatus": true,
     "eslint.debug": true,
+    "files.associations": {
+        "*.liquid": "liquid"
+    },
     "git.ignoredRepositories": [
         "Static"
     ],
     "git.ignoreMissingGitWarning": true,
     "html.format.wrapLineLength": 0,
+    "indentRainbow.lightIndicatorStyleLineWidth": 2,
     "liveServer.settings.CustomBrowser": "chrome",
     "liveServer.settings.donotShowInfoMsg": true,
     "MinifyAll.disableJavascript": false,
     "MinifyAll.disableJavascriptReact": false,
+    "prettier.printWidth": 500,
     "python.defaultInterpreterPath": "/usr/bin/python",
+    "security.workspace.trust.banner": "never",
     "security.workspace.trust.untrustedFiles": "open",
+    "shopifyLiquid.formatterDevPreview": true,
     "terminal.integrated.macOptionClickForcesSelection": true,
     "update.mode": "manual",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
