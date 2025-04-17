@@ -34,3 +34,8 @@ TODO: Automate. I don't have these setup to automatically get set on a new machi
 * Xcode
   * Command Line Tools Package
 * Zoom
+
+## MCP Servers
+
+* [GitHub MCP Server](https://github.com/github/github-mcp-server)
+* [Shopify Dev MCP Server](https://github.com/Shopify/dev-mcp)
