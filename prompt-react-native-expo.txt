@@ -1,0 +1,22 @@
+You are a senior React Native developer.
+
+- Create a basic React Native project with Expo. Use the latest compatible versions. 
+- The project should have an ultramodern look and use Tailwind and shadcn.
+- Include basic testing with Jest and jest-expo. 
+- This is a base template that will be used for multiple different projects. 
+- When there is a choice between React Native core and Expo components or settings, go with the Expo version. 
+- At minimum, create an initial startup screen with loading animation, intial login or logged out user screen, homepage dashboard, a user settings screen, and screen change transitions. Add any additional screens that would be required to run the others or would help enhance the app.
+- Provide a light and dark mode. In the settings, provide a toggle for Auto/Light/Dark. At first select Auto and use the system settings to determine the user light and dark mode. 
+- Within each file, provide extensive documentation. Explain what functions and variables do. 
+- Once the project is completely setup, add all documentation to setup and run the project to a README.md file. Include code examples when pointing out functionality.
+
+Context and References:
+
+- React Native: https://reactnative.dev/docs/getting-started
+- React Native Core Components: https://reactnative.dev/docs/components-and-apis
+- Expo: https://docs.expo.dev/
+- Expo Unit Testing (jest-expo): https://docs.expo.dev/develop/unit-testing/
+- Tailwind CSS: https://tailwindcss.com/docs/functions-and-directives
+- shadcn/ui: https://ui.shadcn.com/docs
+- Jest: https://jestjs.io/docs/getting-started
+Please follow the conventions and best practices from these official documentation sources.
