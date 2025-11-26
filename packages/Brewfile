@@ -1,0 +1,87 @@
+# Brewfile - Homebrew package management
+# Install all packages: brew bundle --file=~/dotfiles/packages/Brewfile
+# Generate from current: brew bundle dump --force --file=~/dotfiles/packages/Brewfile
+
+# Taps
+tap "homebrew/bundle"
+tap "homebrew/cask-fonts"
+
+###############################################################################
+# CLI Tools                                                                   #
+###############################################################################
+
+brew "git"
+brew "zsh"
+brew "wget"
+brew "curl"
+
+# Modern CLI replacements
+brew "bat"          # Better cat
+brew "exa"          # Better ls
+brew "fzf"          # Fuzzy finder
+brew "ripgrep"      # Better grep
+brew "fd"           # Better find
+brew "tldr"         # Simplified man pages
+brew "tree"         # Directory visualization
+brew "htop"         # Better top
+brew "jq"           # JSON processor
+
+# Development tools
+brew "node"
+brew "python@3"
+brew "gh"           # GitHub CLI
+
+# Utilities
+brew "stow"         # Symlink manager (optional)
+brew "mas"          # Mac App Store CLI
+
+###############################################################################
+# Applications (Casks)                                                        #
+###############################################################################
+
+# Browsers
+cask "google-chrome"
+cask "firefox"
+
+# Development
+cask "visual-studio-code"
+cask "android-studio"
+cask "xcode"        # Or install from App Store
+
+# Terminal
+cask "hyper"
+
+# Utilities
+cask "google-drive"
+cask "displaylink"
+cask "amphetamine"
+
+# Design
+cask "figma"
+# Note: Adobe Creative Cloud requires manual installation
+
+# Communication
+cask "zoom"
+
+# Optional but recommended
+# cask "iterm2"       # Alternative to Hyper
+# cask "rectangle"    # Window management
+# cask "alfred"       # Spotlight replacement
+# cask "docker"       # Containerization
+
+###############################################################################
+# Fonts                                                                       #
+###############################################################################
+
+cask "font-jetbrains-mono"
+cask "font-fira-code"
+cask "font-inconsolata-for-powerline"
+
+###############################################################################
+# Mac App Store (via mas)                                                    #
+###############################################################################
+# Find app IDs: mas search "App Name"
+
+# TODO: Add your Mac App Store applications
+# mas "Amphetamine", id: 937984704
+# mas "ColorSlurp", id: 1287239339

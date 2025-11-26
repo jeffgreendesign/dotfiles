@@ -1,0 +1,53 @@
+# ~/.zshrc - Zsh configuration
+# Install: ln -sf ~/dotfiles/shell/zshrc ~/.zshrc
+
+# Path to your oh-my-zsh installation
+export ZSH="$HOME/.oh-my-zsh"
+
+# Theme
+ZSH_THEME="robbyrussell"  # TODO: Customize or use starship
+
+# Oh My Zsh plugins
+# Standard plugins: $ZSH/plugins/
+# Custom plugins: $ZSH_CUSTOM/plugins/
+plugins=(
+  git
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+  # TODO: Add your preferred plugins
+)
+
+source $ZSH/oh-my-zsh.sh
+
+# User configuration
+
+# Preferred editor
+export EDITOR='code'
+export VISUAL='code'
+
+# Load aliases
+if [ -f ~/dotfiles/shell/aliases.sh ]; then
+  source ~/dotfiles/shell/aliases.sh
+fi
+
+# Load functions
+if [ -f ~/dotfiles/shell/functions.sh ]; then
+  source ~/dotfiles/shell/functions.sh
+fi
+
+# Homebrew (macOS Intel)
+if [ -d "/usr/local/bin" ]; then
+  export PATH="/usr/local/bin:$PATH"
+fi
+
+# Homebrew (macOS Apple Silicon)
+if [ -d "/opt/homebrew/bin" ]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
+# Node version manager (if using nvm)
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
+# TODO: Add your custom PATH additions, environment variables, etc.
