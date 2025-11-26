@@ -69,6 +69,7 @@ dotfiles/
 ## Scripts
 
 ### `restore.sh` - Complete Machine Setup
+
 Full installation script for setting up a new machine from scratch.
 
 ```bash
@@ -84,6 +85,7 @@ Full installation script for setting up a new machine from scratch.
 - Optionally set macOS defaults
 
 ### `install.sh` - Create Symlinks
+
 Creates symbolic links from dotfiles to their expected locations.
 
 ```bash
@@ -99,6 +101,7 @@ Creates symbolic links from dotfiles to their expected locations.
 - Cursor settings → `~/Library/Application Support/Cursor/User/`
 
 ### `backup.sh` - Backup Existing Files
+
 Backs up your current dotfiles before installation.
 
 ```bash
@@ -108,6 +111,7 @@ Backs up your current dotfiles before installation.
 Creates timestamped backup directory with existing configs.
 
 ### `setup-macos.sh` - macOS System Preferences
+
 Automates macOS system settings and preferences.
 
 ```bash
@@ -122,6 +126,7 @@ Automates macOS system settings and preferences.
 - And more...
 
 ### `brew-export.sh` - Export Homebrew Packages
+
 Generates Brewfile from currently installed packages.
 
 ```bash
@@ -131,6 +136,7 @@ Generates Brewfile from currently installed packages.
 Run this after installing new Homebrew packages to keep Brewfile updated.
 
 ### `vscode-export.sh` - Export Editor Extensions
+
 Updates extension lists for VS Code and Cursor.
 
 ```bash

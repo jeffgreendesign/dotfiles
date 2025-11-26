@@ -1,6 +1,9 @@
 # ~/.zshrc - Zsh configuration
 # Install: ln -sf ~/dotfiles/shell/zshrc ~/.zshrc
 
+# Dotfiles directory (can be overridden)
+export DOTFILES_DIR="${DOTFILES_DIR:-$HOME/dotfiles}"
+
 # Path to your oh-my-zsh installation
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -31,13 +34,13 @@ export EDITOR='code'
 export VISUAL='code'
 
 # Load aliases
-if [ -f ~/dotfiles/shell/aliases.sh ]; then
-  source ~/dotfiles/shell/aliases.sh
+if [ -f "$DOTFILES_DIR/shell/aliases.sh" ]; then
+  source "$DOTFILES_DIR/shell/aliases.sh"
 fi
 
 # Load functions
-if [ -f ~/dotfiles/shell/functions.sh ]; then
-  source ~/dotfiles/shell/functions.sh
+if [ -f "$DOTFILES_DIR/shell/functions.sh" ]; then
+  source "$DOTFILES_DIR/shell/functions.sh"
 fi
 
 # Homebrew (macOS Intel)

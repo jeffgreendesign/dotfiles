@@ -4,11 +4,20 @@
 
 # Create directory and cd into it
 mkcd() {
+  if [ -z "${1:-}" ]; then
+    echo "Usage: mkcd <directory>" >&2
+    return 1
+  fi
   mkdir -p "$1" && cd "$1" || return 1
 }
 
 # Extract various archive formats
 extract() {
+  if [ -z "${1:-}" ]; then
+    echo "Usage: extract <archive-file>" >&2
+    return 1
+  fi
+
   if [ -f "$1" ]; then
     case "$1" in
       *.tar.bz2)   tar xjf "$1"     ;;
@@ -31,11 +40,19 @@ extract() {
 
 # Find file by name
 ff() {
+  if [ -z "${1:-}" ]; then
+    echo "Usage: ff <pattern>" >&2
+    return 1
+  fi
   find . -type f -iname "*$1*"
 }
 
 # Find directory by name
 fdir() {
+  if [ -z "${1:-}" ]; then
+    echo "Usage: fdir <pattern>" >&2
+    return 1
+  fi
   find . -type d -iname "*$1*"
 }
 
