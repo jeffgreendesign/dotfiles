@@ -1,5 +1,5 @@
 # Global npm packages
-# Install all: cat packages/npm-global.txt | xargs npm install -g
+# Install all: grep -v '^#' packages/npm-global.txt | grep -v '^$' | xargs npm install -g
 # Generate: npm list -g --depth=0 --parseable | tail -n +2 | xargs -n1 basename > packages/npm-global.txt
 
 # Common global packages (examples - customize to your needs)

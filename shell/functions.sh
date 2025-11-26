@@ -1,9 +1,10 @@
 # Shell functions
 # Sourced by .zshrc
+# shellcheck shell=bash
 
 # Create directory and cd into it
 mkcd() {
-  mkdir -p "$1" && cd "$1"
+  mkdir -p "$1" && cd "$1" || return 1
 }
 
 # Extract various archive formats
@@ -34,7 +35,7 @@ ff() {
 }
 
 # Find directory by name
-fd() {
+fdir() {
   find . -type d -iname "*$1*"
 }
 

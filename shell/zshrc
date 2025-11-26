@@ -17,7 +17,12 @@ plugins=(
   # TODO: Add your preferred plugins
 )
 
-source $ZSH/oh-my-zsh.sh
+# Load Oh My Zsh if installed
+if [ -f "$ZSH/oh-my-zsh.sh" ]; then
+  source "$ZSH/oh-my-zsh.sh"
+else
+  echo "Oh My Zsh not found at $ZSH (skipping). Install it or run ./scripts/restore.sh."
+fi
 
 # User configuration
 

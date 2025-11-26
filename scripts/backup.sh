@@ -1,7 +1,12 @@
 #!/usr/bin/env bash
 # Backup existing dotfiles before installation
+# Note: VS Code and Cursor backup paths are macOS-specific
 
 set -e
+
+if [[ "$OSTYPE" != "darwin"* ]]; then
+  echo "Warning: This script is optimized for macOS. Some backups may not work on other platforms."
+fi
 
 BACKUP_DIR="$HOME/dotfiles-backup-$(date +%Y%m%d-%H%M%S)"
 
@@ -36,7 +41,11 @@ fi
 if [ -d "$HOME/Library/Application Support/Cursor/User" ]; then
   echo "Backing up Cursor settings..."
   mkdir -p "$BACKUP_DIR/cursor"
-  cp "$HOME/Library/Application Support/Cursor/User/"*.txt "$BACKUP_DIR/cursor/" 2>/dev/null || true
+  shopt -s nullglob
+  for file in "$HOME/Library/Application Support/Cursor/User/"*.txt; do
+    [ -e "$file" ] && cp "$file" "$BACKUP_DIR/cursor/" 2>/dev/null || true
+  done
+  shopt -u nullglob
 fi
 
 echo "Backup complete: $BACKUP_DIR"

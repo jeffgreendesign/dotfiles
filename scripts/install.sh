@@ -5,7 +5,6 @@
 set -e
 
 # Colors for output
-RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
@@ -19,12 +18,14 @@ echo -e "${GREEN}Installing dotfiles...${NC}"
 create_symlink() {
   local source=$1
   local target=$2
+  local backup
 
   if [ -L "$target" ]; then
     echo -e "${YELLOW}Symlink already exists: $target${NC}"
   elif [ -f "$target" ] || [ -d "$target" ]; then
-    echo -e "${YELLOW}Backing up existing file: $target${NC}"
-    mv "$target" "${target}.backup"
+    backup="${target}.backup.$(date +%Y%m%d%H%M%S)"
+    echo -e "${YELLOW}Backing up existing file: $target -> $backup${NC}"
+    mv "$target" "$backup"
     ln -sf "$source" "$target"
     echo -e "${GREEN}Created symlink: $target -> $source${NC}"
   else
@@ -60,3 +61,7 @@ fi
 
 echo -e "${GREEN}Dotfiles installation complete!${NC}"
 echo -e "${YELLOW}Please restart your terminal for changes to take effect.${NC}"
+echo ""
+echo -e "${YELLOW}Remember: Update your Git user info:${NC}"
+echo "  git config --global user.name \"Your Name\""
+echo "  git config --global user.email \"your.email@example.com\""

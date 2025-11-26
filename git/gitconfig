@@ -8,6 +8,7 @@
 	email = your.email@example.com
 
 [core]
+	# Editor: code (VS Code), vim, nano, or any $EDITOR
 	editor = code --wait
 	excludesfile = ~/dotfiles/git/gitignore_global
 	autocrlf = input

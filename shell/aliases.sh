@@ -1,5 +1,6 @@
 # Shell aliases
 # Sourced by .zshrc
+# shellcheck shell=bash
 
 # Navigation
 alias ..='cd ..'

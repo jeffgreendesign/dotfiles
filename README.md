@@ -31,7 +31,7 @@ This will install Homebrew, all packages, Oh My Zsh, create symlinks, and option
 
 ## Repository Structure
 
-```
+```text
 dotfiles/
 ├── editors/              # Editor configurations
 │   ├── vscode/          # Visual Studio Code
@@ -92,6 +92,7 @@ Creates symbolic links from dotfiles to their expected locations.
 
 **Creates symlinks for:**
 - Git config → `~/.gitconfig`
+- Global gitignore → `~/.gitignore_global`
 - Zsh config → `~/.zshrc`
 - Hyper terminal → `~/.hyper.js`
 - VS Code settings → `~/Library/Application Support/Code/User/`

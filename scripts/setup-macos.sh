@@ -4,6 +4,10 @@
 
 set -e
 
+echo "This script will modify system settings and may require administrator privileges."
+echo "You may be prompted for your password."
+echo ""
+
 echo "Setting macOS defaults..."
 
 # Close System Preferences to prevent conflicts
@@ -152,5 +156,7 @@ echo ""
 read -p "Would you like to restart now? (y/n) " -n 1 -r
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]; then
+  echo "Restarting in 10 seconds... Press Ctrl+C to cancel."
+  sleep 10
   sudo shutdown -r now
 fi
