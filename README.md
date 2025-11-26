@@ -25,8 +25,13 @@ TODO: Automate. I don't have these setup to automatically get set on a new machi
 * Google Drive
 * Password manager
 * Visual Studio Code
-  * [Extensions](https://github.com/jeffgreendesign/dotfiles/blob/main/vscode-extensions.txt)
-  * [Settings](https://github.com/jeffgreendesign/dotfiles/blob/main/vscode-settings.json)
+  * [Extensions](https://github.com/jeffgreendesign/dotfiles/blob/main/config/vscode/extensions.txt)
+  * [Settings](https://github.com/jeffgreendesign/dotfiles/blob/main/config/vscode/settings.json)
+* Cursor
+  * [Extensions](https://github.com/jeffgreendesign/dotfiles/blob/main/config/cursor/extensions.txt)
+  * [User Rules](https://github.com/jeffgreendesign/dotfiles/blob/main/config/cursor/user-rules.txt)
+* Hyper Terminal
+  * [Configuration](https://github.com/jeffgreendesign/dotfiles/blob/main/config/hyper/.hyper.js)
   * Terminal
     * Oh My Zsh
     * Homebrew
@@ -34,6 +39,10 @@ TODO: Automate. I don't have these setup to automatically get set on a new machi
 * Xcode
   * Command Line Tools Package
 * Zoom
+
+## AI Prompts & Templates
+
+* [React Native with Expo](https://github.com/jeffgreendesign/dotfiles/blob/main/docs/prompts/react-native-expo.txt)
 
 ## MCP Servers
 
