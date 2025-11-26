@@ -170,6 +170,7 @@ Includes:
 - `git/gitignore_global` → `~/.gitignore_global`
 
 **Before first use:**
+
 ```bash
 # Update with your information
 git config --global user.name "Your Name"
@@ -187,6 +188,7 @@ git config --global user.email "your.email@example.com"
 **Location:** `editors/vscode/`
 
 **Manual installation of extensions:**
+
 ```bash
 while IFS= read -r ext; do code --install-extension "$ext"; done < editors/vscode/extensions.txt
 ```
@@ -208,11 +210,15 @@ User rules define AI behavior and coding standards:
 **Location:** `packages/Brewfile`
 
 **Install packages:**
+
 ```bash
-brew bundle --file=~/dotfiles/packages/Brewfile
+brew bundle --file="$DOTFILES_DIR/packages/Brewfile"
+# Or if using default location:
+# brew bundle --file=~/dotfiles/packages/Brewfile
 ```
 
 **Update Brewfile:**
+
 ```bash
 ./scripts/brew-export.sh
 ```

@@ -8,8 +8,13 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 BREWFILE="$SCRIPT_DIR/../packages/Brewfile"
 mkdir -p "$(dirname "$BREWFILE")"
 
-if ! command -v brew &> /dev/null; then
-  echo "Homebrew is not installed"
+if ! command -v brew >/dev/null 2>&1; then
+  echo "Homebrew is not installed" >&2
+  exit 1
+fi
+
+if ! brew help bundle >/dev/null 2>&1; then
+  echo "'brew bundle' is not available. Install the bundle tap or update Homebrew." >&2
   exit 1
 fi
 

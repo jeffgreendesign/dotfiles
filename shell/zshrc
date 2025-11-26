@@ -24,14 +24,19 @@ plugins=(
 if [ -f "$ZSH/oh-my-zsh.sh" ]; then
   source "$ZSH/oh-my-zsh.sh"
 else
-  echo "Oh My Zsh not found at $ZSH (skipping). Install it or run ./scripts/restore.sh."
+  echo "Oh My Zsh not found at $ZSH (skipping). Install it or run \"$DOTFILES_DIR/scripts/restore.sh\"."
 fi
 
 # User configuration
 
-# Preferred editor
-export EDITOR='code'
-export VISUAL='code'
+# Preferred editor (fallback to vim if VS Code CLI not available)
+if command -v code >/dev/null 2>&1; then
+  export EDITOR='code --wait'
+  export VISUAL='code --wait'
+else
+  export EDITOR='vim'
+  export VISUAL='vim'
+fi
 
 # Load aliases
 if [ -f "$DOTFILES_DIR/shell/aliases.sh" ]; then
