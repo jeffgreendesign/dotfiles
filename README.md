@@ -213,8 +213,6 @@ User rules define AI behavior and coding standards:
 
 ```bash
 brew bundle --file="$DOTFILES_DIR/packages/Brewfile"
-# Or if using default location:
-# brew bundle --file=~/dotfiles/packages/Brewfile
 ```
 
 **Update Brewfile:**
