@@ -1,0 +1,105 @@
+# Git configuration
+# Install: ln -sf ~/dotfiles/git/gitconfig ~/.gitconfig
+# Or use: git config --global include.path ~/dotfiles/git/gitconfig
+
+[user]
+	# TODO: Update with your information
+	name = Your Name
+	email = your.email@example.com
+
+[core]
+	# Editor: code (VS Code), vim, nano, or any $EDITOR
+	editor = code --wait
+	excludesfile = ~/dotfiles/git/gitignore_global
+	autocrlf = input
+	# Treat spaces before tabs and all kinds of trailing whitespace as an error
+	whitespace = space-before-tab,-indent-with-non-tab,trailing-space
+
+[init]
+	defaultBranch = main
+
+[pull]
+	rebase = false
+
+[push]
+	default = simple
+	followTags = true
+
+[fetch]
+	prune = true
+
+[diff]
+	colorMoved = zebra
+
+[merge]
+	conflictstyle = diff3
+
+[color]
+	ui = auto
+
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+
+# Useful aliases
+[alias]
+	# Status
+	s = status -s
+	st = status
+
+	# Checkout
+	co = checkout
+	cob = checkout -b
+
+	# Branch
+	br = branch
+	bra = branch -a
+
+	# Commit
+	c = commit
+	cm = commit -m
+	ca = commit --amend
+	can = commit --amend --no-edit
+
+	# Log
+	l = log --oneline
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	last = log -1 HEAD --stat
+
+	# Diff
+	d = diff
+	ds = diff --staged
+
+	# Pull/Push
+	pl = pull
+	ps = push
+	psf = push --force-with-lease
+
+	# Stash
+	sl = stash list
+	sa = stash apply
+	ss = stash save
+
+	# Undo last commit but keep changes
+	undo = reset HEAD~1 --mixed
+
+	# Show contributors
+	contributors = shortlog --summary --numbered
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

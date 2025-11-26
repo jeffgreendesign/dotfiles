@@ -1,0 +1,18 @@
+# Global npm packages
+# Install all: grep -v '^#' packages/npm-global.txt | grep -v '^$' | xargs npm install -g
+# Generate: npm list -g --depth=0 --parseable | tail -n +2 | xargs -n1 basename > packages/npm-global.txt
+
+# Common global packages (examples - customize to your needs)
+# @angular/cli
+# create-react-app
+# eslint
+# expo-cli
+# firebase-tools
+# gatsby-cli
+# netlify-cli
+# prettier
+# typescript
+# vercel
+# yarn
+
+# TODO: Add your global npm packages

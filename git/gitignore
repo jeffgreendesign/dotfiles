@@ -18,7 +18,6 @@ $RECYCLE.BIN/
 # Editor temporary files
 *.swp
 *.swo
-*~
 .vscode/
 .idea/
 
@@ -41,9 +40,7 @@ $RECYCLE.BIN/
 .env.local
 .env.*.local
 
-# Personal/sensitive files
-secrets/
-private/
-
-# Dotfiles backup directory
-backup/
+# Personal/sensitive files that shouldn't be shared
+# (uncomment if you have any)
+# secrets/
+# private/
